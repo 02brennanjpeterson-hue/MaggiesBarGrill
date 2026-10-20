@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Maggie's Hometown Tavern | Hendrum, MN</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,600&amp;family=Rokkitt:wght@400;500;600;700;800&amp;family=Vollkorn:ital,wght@0,400..900;1,400..900&amp;family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="script.js"></script>
+</head>
+<body class="bg-parchment font-body-md text-on-surface antialiased selection:bg-tavern-brass selection:text-white">
+<!-- TOP SMALL-TOWN COMMUNITY TICKER / BULLETIN -->
+<div class="w-full bg-tavern-timber text-[#e5d5be] border-b border-tavern-copper/30 px-4 py-1.5 text-xs font-tavern-title tracking-wider relative z-50">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+<div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span><span class="uppercase tracking-widest text-amber-200 font-bold">Hendrum, Minnesota</span></div>
+<div class="flex items-center gap-4 text-xs font-semibold">
+<span class="flex items-center gap-1 text-amber-300">
+<span class="material-symbols-outlined text-sm">schedule</span> Open Daily until 10:00 PM
+      </span>
+<a class="hover:text-amber-200 transition-colors duration-200 flex items-center gap-1 group" href="tel:2184150400">
+<span class="material-symbols-outlined text-sm group-hover:rotate-12 transition-transform duration-200">call</span> (218) 415-0400
+      </a>
+</div>
+</div>
+</div>
+<!-- HEADER / NAVIGATION (Warm Midwest Rustic Style) -->
+<header class="sticky top-0 w-full z-50 bg-parchment-warm/95 backdrop-blur-md border-b-2 border-parchment-border shadow-sm transition-all duration-300">
+<div class="h-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+<!-- Brand Logo Lockup -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-16 h-16 rounded-md p-0.5 bg-parchment-card border-2 border-tavern-rust/60 shadow-md group-hover:rotate-2 group-hover:scale-105 transition-all duration-300 shrink-0 flex items-center justify-center overflow-hidden">
+<img alt="Maggie's Hometown Tavern Hendrum MN Water Tower Vintage Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApvLyS_4x1fSHxHkcSIviMshkBKUrswzsFsgGhjoIRgIFdPePaWiyWKkUz28RC-ZfeChi-7JirMCmQkH48sKqJ2NQvzf7M7Y8keeMgqTRtJGbM-m4Gya3hOLonaBk5jL0tsdGuMkj7zIJH2XuTsFPwQzGWc5HJxqVw0D4Be-PBr1ZrZtm71mIdDRt-ik-GbSzJZEPiBIwo0sWjnoTFGMLocUFgNCzByDA04dUxVeP2AHHRTdUKJJhOGifpBKdCCyAEAS0"/>
+</div>
+<div class="flex flex-col">
+<span class="font-tavern-display text-xl sm:text-2xl font-black tracking-tight text-tavern-timber leading-tight group-hover:text-tavern-rust transition-colors duration-200">
+          Maggie's Hometown Tavern
+        </span>
+</div>
+</a>
+<!-- Rustic Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8 text-xs font-tavern-title uppercase tracking-widest font-bold text-tavern-timber"><a class="nav-link-sweep hover:text-tavern-rust pb-1 transition-colors" href="#menu">Menu</a><a class="nav-link-sweep hover:text-tavern-rust pb-1 transition-colors" href="#specials">Weekly Specials</a><a class="nav-link-sweep hover:text-tavern-rust pb-1 transition-colors" href="#events">Events</a><a class="nav-link-sweep hover:text-tavern-rust pb-1 transition-colors" href="#about">Our Story</a><a class="nav-link-sweep hover:text-tavern-rust pb-1 transition-colors" href="#location">Hours &amp; Location</a></nav>
+<!-- Header Actions -->
+<div class="flex items-center gap-3">
+<a class="btn-tactile hidden sm:flex bg-tavern-rust hover:bg-tavern-timber text-parchment px-4 py-2.5 rounded font-tavern-title text-xs sm:text-sm font-bold uppercase tracking-wider border border-amber-950 shadow-sm items-center gap-1.5 hover:shadow-md hover:scale-[1.02]" href="#location"><span class="material-symbols-outlined text-base group-hover:translate-x-0.5 transition-transform">directions</span>Get Directions</a>
+<button aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu" class="btn-tactile lg:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-parchment-border bg-parchment-card text-tavern-timber hover:text-tavern-rust hover:border-tavern-rust transition-colors" id="mobile-menu-toggle" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+<nav aria-label="Mobile navigation" class="mobile-navigation hidden lg:hidden border-t border-parchment-border bg-parchment-warm shadow-lg" id="mobile-navigation">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-2">
+<a class="mobile-navigation-link" href="#menu">Menu</a>
+<a class="mobile-navigation-link" href="#specials">Weekly Specials</a>
+<a class="mobile-navigation-link" href="#events">Events</a>
+<a class="mobile-navigation-link" href="#about">Our Story</a>
+<a class="mobile-navigation-link" href="#location">Hours &amp; Location</a>
+<a class="mobile-navigation-link sm:hidden" href="#location">Get Directions</a>
+</div>
+</nav>
+</header>
+<main class="w-full bg-parchment overflow-hidden">
+<!-- HERO SECTION: Warm, Weathered Oak & Aged Midwestern Tavern Vibe -->
+<section class="relative w-full pt-10 pb-16 md:py-20 overflow-hidden bg-gradient-to-b from-parchment-warm via-parchment to-parchment-dark/30 border-b-2 border-parchment-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Vintage Midwestern Tavern Eyebrow Badge -->
+<div class="reveal-on-scroll inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-parchment-card border-2 border-parchment-border shadow-xs mb-6 hover:shadow-sm transition-all duration-200">
+<span class="text-tavern-rust font-bold text-xs uppercase font-tavern-title tracking-widest flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">local_drink</span> Norman County's Downtown Gathering Spot
+        </span>
+<span class="text-parchment-border">•</span>
+<span class="text-xs font-bold text-tavern-copper font-tavern-title">★ 4.8 RATED ON GOOGLE</span>
+</div>
+<!-- Hero Main Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-10"><div class="reveal-on-scroll lg:col-span-7 flex flex-col items-start text-left space-y-5"><div class="space-y-1"><p class="font-tavern-title text-base uppercase tracking-widest text-tavern-rust font-bold">Hendrum, Minnesota • Main Street Traditions</p><h1 class="font-tavern-display text-4xl sm:text-5xl lg:text-5xl text-tavern-timber font-black tracking-tight leading-[1.12]">Food, Friendly Folks <span class="block italic font-normal text-tavern-amber font-serif">&amp; Ice-Cold Beer.</span></h1></div><div class="flex items-center gap-3 py-1 text-tavern-rust w-full max-w-lg"><span class="h-px bg-parchment-border flex-1"></span><span class="material-symbols-outlined text-sm animate-pulse">star</span><span class="font-tavern-title text-xs tracking-widest uppercase font-bold text-tavern-oak">Downtown Hendrum</span><span class="material-symbols-outlined text-sm animate-pulse">star</span><span class="h-px bg-parchment-border flex-1"></span></div><p class="font-body-serif text-lg text-tavern-oak leading-relaxed">Welcome to <strong class="text-tavern-timber font-bold">Maggie’s Hometown Tavern</strong>. When you step through our doors on Main Street, you’re greeted like family. Pull up a weathered stool for our crispy chicken sammies, loaded flatbreads, homemade enchiladas, handcrafted cocktails, or a frost-kissed draft beer.</p><div class="flex flex-wrap items-center gap-3 pt-2"><a class="btn-tactile animate-hearth-pulse inline-flex items-center justify-center bg-tavern-timber hover:bg-tavern-rust text-parchment px-6 py-3.5 rounded font-tavern-title text-sm font-bold uppercase tracking-widest shadow-md gap-2 border border-amber-900 hover:scale-[1.02]" href="#menu"><span class="material-symbols-outlined text-base">menu_book</span>View Tavern Menu</a><a class="btn-tactile inline-flex items-center justify-center bg-parchment-card hover:bg-parchment-warm text-tavern-timber px-5 py-3.5 rounded font-tavern-title text-sm font-bold uppercase tracking-wider border-2 border-parchment-border shadow-xs gap-2 hover:border-tavern-rust/40 hover:scale-[1.02]" href="#location"><span class="material-symbols-outlined text-base text-tavern-rust">directions</span>Visit 303 Main St E</a><a class="btn-tactile inline-flex items-center justify-center px-3 py-3.5 text-tavern-timber hover:text-tavern-rust font-tavern-title text-sm font-bold tracking-wider group" href="tel:2184150400"><span class="material-symbols-outlined mr-1 text-base text-tavern-copper group-hover:rotate-12 transition-transform duration-200">call</span> (218) 415-0400</a></div></div><div class="reveal-on-scroll delay-200 lg:col-span-5 flex flex-col items-center"><div class="vintage-border bg-parchment-card p-2 rounded-lg shadow-md w-full max-w-md hover:shadow-xl transition-all duration-300 group"><div class="relative rounded overflow-hidden aspect-[4/3] bg-parchment-warm"><img alt="Norman the Tavern Dog in front of Maggie's Hometown Tavern sign and Hendrum water tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbHXanIAdmRIKOkY_RDjUDOHM1uqwN4tdCks_EdKWXbQRB12NgKE0YfSCM06B2oZsnpoLeEpvbYl7qgTjgAmVdixCQZk7fQPPKXAJ0oRNY5X3L3A4MKN4kJC7rHhaP0xWXYjxKVecqqE-xt--8WGoD1RdHtdQg5hHndykVNmVlp4mmnue-6SayenKN7-3XiG5_n86JmnK7aUMTS43THbQUn1cfcWvu3HLZvaXiMpx4mozVWvgh2YSDty033YW8ZW1Y10s"/><div class="animate-float-subtle absolute bottom-2 left-2 right-2 bg-tavern-timber/90 backdrop-blur-md text-amber-200 px-3 py-1.5 rounded flex items-center justify-between shadow"><span class="font-tavern-title text-xs font-bold uppercase tracking-wider flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-tavern-amber">pets</span> Norman welcoming you to Main St, Hendrum</span><span class="text-[10px] font-bold text-amber-300 uppercase tracking-widest">Est. 2024</span></div></div></div></div></div>
+<!-- Rustic Small-Town Trust Bar -->
+<div class="reveal-on-scroll delay-300 grid grid-cols-2 md:grid-cols-5 gap-3 pt-6 border-t-2 border-parchment-border">
+<div class="flex items-center justify-center gap-2 py-2.5 px-3 bg-parchment-card rounded border border-parchment-border text-xs font-tavern-title font-bold text-tavern-timber shadow-2xs hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-default">
+<span class="material-symbols-outlined text-tavern-rust text-base">star</span>
+4.8 ★ Google Reviews
+</div>
+<div class="flex items-center justify-center gap-2 py-2.5 px-3 bg-parchment-card rounded border border-parchment-border text-xs font-tavern-title font-bold text-tavern-timber shadow-2xs hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-default">
+<span class="material-symbols-outlined text-tavern-rust text-base">thumb_up</span>
+5.0 ★ Facebook Loved
+</div>
+<div class="flex items-center justify-center gap-2 py-2.5 px-3 bg-parchment-card rounded border border-parchment-border text-xs font-tavern-title font-bold text-tavern-timber shadow-2xs hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-default">
+<span class="material-symbols-outlined text-tavern-copper text-base">restaurant</span>
+Food Right at the Bar
+</div>
+<div class="flex items-center justify-center gap-2 py-2.5 px-3 bg-parchment-card rounded border border-parchment-border text-xs font-tavern-title font-bold text-tavern-timber shadow-2xs hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-default">
+<span class="material-symbols-outlined text-tavern-copper text-base">sports_bar</span>
+Craft Mules &amp; Drafts
+</div>
+<div class="col-span-2 md:col-span-1 flex items-center justify-center gap-2 py-2.5 px-3 bg-parchment-card rounded border border-parchment-border text-xs font-tavern-title font-bold text-tavern-timber shadow-2xs hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-default">
+<span class="material-symbols-outlined text-emerald-800 text-base">payments</span>
+$10–$20 Honest Value
+</div>
+</div>
+</div>
+</section>
+<!-- CHALKBOARD & WEATHERED WOOD BANNER STRIP -->
+<section class="w-full bg-slate-blackboard text-[#e5d5be] py-7 border-y-4 border-tavern-timber">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+<div class="reveal-on-scroll px-3 py-1 flex flex-col items-center group">
+<div class="flex items-center gap-1 text-amber-400 group-hover:scale-105 transition-transform duration-200">
+<span class="font-tavern-display text-3xl font-black">4.8</span>
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<span class="font-tavern-title text-xs uppercase tracking-widest font-bold text-amber-200 mt-1">Hometown Reputation</span>
+<p class="font-body-serif text-xs text-stone-300 mt-0.5">Top-rated tavern in Norman County</p>
+</div>
+<div class="reveal-on-scroll delay-100 px-3 py-1 pt-4 md:pt-1 flex flex-col items-center group">
+<span class="font-tavern-display text-2xl font-black text-amber-400 group-hover:scale-105 transition-transform duration-200">303 Main St E</span>
+<span class="font-tavern-title text-xs uppercase tracking-widest font-bold text-amber-200 mt-1">Downtown Hendrum</span>
+<p class="font-body-serif text-xs text-stone-300 mt-0.5">Cornerstone local meeting place</p>
+</div>
+<div class="reveal-on-scroll delay-200 px-3 py-1 pt-4 md:pt-1 flex flex-col items-center group">
+<span class="font-tavern-display text-3xl font-black text-amber-400 group-hover:scale-105 transition-transform duration-200">$10–$20</span>
+<span class="font-tavern-title text-xs uppercase tracking-widest font-bold text-amber-200 mt-1">Honest Hometown Value</span>
+<p class="font-body-serif text-xs text-stone-300 mt-0.5">Hearty Midwestern tavern plates</p>
+</div>
+<div class="reveal-on-scroll delay-300 px-3 py-1 pt-4 md:pt-1 flex flex-col items-center group">
+<span class="font-tavern-display text-3xl font-black text-amber-400 group-hover:scale-105 transition-transform duration-200">100%</span>
+<span class="font-tavern-title text-xs uppercase tracking-widest font-bold text-amber-200 mt-1">Friendly Midwestern Warmth</span>
+<p class="font-body-serif text-xs text-stone-300 mt-0.5">Where neighbors know your name</p>
+</div>
+</div>
+</div>
+</section>
+<!-- MENU SECTION -->
+<section class="w-full bg-parchment py-16 lg:py-24 border-b-2 border-parchment-border" id="menu">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="reveal-on-scroll max-w-3xl mx-auto text-center space-y-3 mb-14"><div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-parchment-card border border-parchment-border text-xs uppercase tracking-widest font-bold text-tavern-rust font-tavern-title"><span class="material-symbols-outlined text-sm">restaurant_menu</span> Made With Hometown Pride</div><h2 class="font-tavern-display text-3xl sm:text-4xl lg:text-5xl font-black text-tavern-timber tracking-tight">Tavern Classics <span class="italic font-normal text-tavern-amber font-serif">&amp; Hometown Bites</span></h2><div class="w-24 h-0.5 bg-tavern-rust/50 mx-auto"></div><p class="font-body-serif text-lg text-tavern-oak leading-relaxed">Real comfort food made right here on Main St — hearty portions, golden fried sides, and cold beverages.</p></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Item 1 -->
+<div class="reveal-on-scroll delay-100 vintage-border bg-parchment-card rounded-lg overflow-hidden flex flex-col shadow-xs hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group"><div class="relative aspect-[4/3] overflow-hidden bg-parchment-warm"><img alt="Crispy Chicken Sammie &amp; Golden Tater Tots with Dip" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByPVngBd2u4fUMn5FNQsiyc6Tafu_2TZy36c8d--JMIo8qxny9AQ8YKVerofvnJLjZ-1N3hMFWrs8J7Kf7Bwt8b_MvRZWQeXqbOpCoIWMNVubtZ_QYBQdSjZJN0KCfvde_3BypzfKK-9BzIcnWuwabDVS9G5slT4wp9CaYaYv6K6zVhdxoW4OAHk8glUWOG6FgeAK9tIukvMLpadskP1H7O1viFiTc-cw2-cYhD51W_8zOi6yYtHtygqZuMGtdf34o_qU"/><span class="absolute top-2.5 right-2.5 bg-tavern-timber text-amber-200 font-tavern-title text-xs font-bold px-2 py-0.5 rounded shadow group-hover:bg-tavern-rust transition-colors duration-200">$13.50</span></div><div class="p-5 flex-1 flex flex-col justify-between space-y-2"><div class="space-y-1"><h3 class="font-tavern-display text-lg font-bold text-tavern-timber leading-snug group-hover:text-tavern-rust transition-colors duration-200">Signature Crispy Chicken Sammie &amp; Crispy Tots</h3><p class="font-body-serif text-xs text-tavern-oak leading-relaxed">Golden fried crispy chicken breast on a toasted bun with seasoned tots and cold beverage.</p></div><div class="pt-3 border-t border-parchment-border flex items-center justify-between text-xs font-tavern-title font-bold text-tavern-rust">Guest Favorite<span class="material-symbols-outlined text-sm group-hover:scale-110 transition-transform">thumb_up</span></div></div></div>
+<!-- Item 2 -->
+<div class="reveal-on-scroll delay-200 vintage-border bg-parchment-card rounded-lg overflow-hidden flex flex-col shadow-xs hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group"><div class="relative aspect-[4/3] overflow-hidden bg-parchment-warm"><img alt="Rustic Tavern Flatbread Pizza with melted mozzarella and meat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACLPJ9NJ0WTx5Xr_iY_MoUKckDr_bZx6vxykYT9G_KyOyz7hRWtRZ59Yqi9DeY2kUGt11fKQsruUHjbzRJGavd-hsAQNpXce42Nhsbva7lS6SaUMvG2-Qennd04c-SAKZRVVTo1eZNGcDA-JhD0ByQwSXaqQJ4MzDyxmxvht9LMktQztdID-ZATJFTdF1J8EDKlvvnVFv-d8U-Lq6x2zjyRmzEPIJQbhRWtNEIIsnMb7D4g7S4ZJcylWBH-fG45f39dTs"/><span class="absolute top-2.5 right-2.5 bg-tavern-timber text-amber-200 font-tavern-title text-xs font-bold px-2 py-0.5 rounded shadow group-hover:bg-tavern-rust transition-colors duration-200">$14.00</span></div><div class="p-5 flex-1 flex flex-col justify-between space-y-2"><div class="space-y-1"><h3 class="font-tavern-display text-lg font-bold text-tavern-timber leading-snug group-hover:text-tavern-rust transition-colors duration-200">Rustic Tavern Flatbread Pizza</h3><p class="font-body-serif text-xs text-tavern-oak leading-relaxed">Oven-baked crust topped with bubbly melted mozzarella, savory meats, and Italian herbs.</p></div><div class="pt-3 border-t border-parchment-border flex items-center justify-between text-xs font-tavern-title font-bold text-tavern-copper">Hearth Baked<span class="material-symbols-outlined text-sm group-hover:scale-110 transition-transform">local_fire_department</span></div></div></div>
+<!-- Item 3 -->
+<div class="reveal-on-scroll delay-300 vintage-border bg-parchment-card rounded-lg overflow-hidden flex flex-col shadow-xs hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group"><div class="relative aspect-[4/3] overflow-hidden bg-parchment-warm"><img alt="Homestyle Cheesy Smothered Enchilada Casserole" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVimPTLXjhjv3sWSNfPet1Lx2RdMgX7zt45BAbYwEAu6zgOhifJHx2AgBLGSmy2Hvk0xsqje1Wh93HMgJv7utXBfLIvt3fuKBR5XIwMLLedrnnT25WnXUL8VrWOgPCv9l_Xhp_l063-GuYLUtw7Klsq1FzneR6hd1OfD6_L-uRt7RgLd7gbW2012SA5hccxD1X84Fe85U-_09O4SkmM7VXAP_XrQiuKSyURHRRRHBY3-KuAT4BJfEzfbMoSYBltg0-CSU"/><span class="absolute top-2.5 right-2.5 bg-tavern-timber text-amber-200 font-tavern-title text-xs font-bold px-2 py-0.5 rounded shadow group-hover:bg-tavern-rust transition-colors duration-200">$13.00</span></div><div class="p-5 flex-1 flex flex-col justify-between space-y-2"><div class="space-y-1"><h3 class="font-tavern-display text-lg font-bold text-tavern-timber leading-snug group-hover:text-tavern-rust transition-colors duration-200">Homestyle Smothered Enchiladas</h3><p class="font-body-serif text-xs text-tavern-oak leading-relaxed">Hearty rolled tortillas baked with rich enchilada sauce and a thick blanket of melted cheddar &amp; jack cheese.</p></div><div class="pt-3 border-t border-parchment-border flex items-center justify-between text-xs font-tavern-title font-bold text-tavern-rust">Dinner Special<span class="material-symbols-outlined text-sm group-hover:scale-110 transition-transform">star</span></div></div></div>
+<!-- Item 4 -->
+<div class="reveal-on-scroll delay-400 vintage-border bg-parchment-card rounded-lg overflow-hidden flex flex-col shadow-xs hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group"><div class="relative aspect-[4/3] overflow-hidden bg-parchment-warm"><img alt="Glazed Sausage Bites, Crinkle Chips &amp; Cold Beer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbG1gU5NspcNU4B8Oezfpndp7Q8mea8zh0HbJ65NBYI1ylA8pHjEhV-edpw9RUgm-_ms7cqMhphqmWglChBRaSJfs9CJK0wpoexcibv2ZBQtZXI9-kRirFIyIV1mXf0JYpg_xVhlVEPqqYxiloOovqADVFU3ghdyaw2BuJaLP-3PEKUzQ6H23VOs2LEG79-jjFwsOsAqOKk3riQh3Q5jR5r3EbGmIuSV6AfcxVw8JT8lrAUoUT9CJy-hiSfF1X2kndM64"/><span class="absolute top-2.5 right-2.5 bg-tavern-timber text-amber-200 font-tavern-title text-xs font-bold px-2 py-0.5 rounded shadow group-hover:bg-tavern-rust transition-colors duration-200">$11.50</span></div><div class="p-5 flex-1 flex flex-col justify-between space-y-2"><div class="space-y-1"><h3 class="font-tavern-display text-lg font-bold text-tavern-timber leading-snug group-hover:text-tavern-rust transition-colors duration-200">Glazed Sausage Bites &amp; Crinkle Chips</h3><p class="font-body-serif text-xs text-tavern-oak leading-relaxed">Tossed in savory BBQ glaze, served with seasoned crinkle chips, house dip, and cold draft pairings.</p></div><div class="pt-3 border-t border-parchment-border flex items-center justify-between text-xs font-tavern-title font-bold text-emerald-800">Bar Favorite<span class="material-symbols-outlined text-sm group-hover:scale-110 transition-transform">sports_bar</span></div></div></div></div>
+<!-- Weekly Specials Board Feature -->
+<div class="reveal-on-scroll mt-14 mb-4 vintage-border bg-parchment-card rounded-lg p-6 sm:p-8 shadow-md border-2 border-tavern-rust/60 hover:shadow-xl transition-all duration-300" id="specials"><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"><div class="lg:col-span-5 flex flex-col items-center"><div class="relative rounded-lg overflow-hidden border-2 border-tavern-timber shadow-md w-full max-w-sm group"><img alt="Maggie's Hometown Tavern Weekly Specials Board featuring Norm" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHog9HMF80AgosGYMtdiC7wXNomffKbpCiG8M54_tGlpmLCm6eP_KkqmT8ShwTxU-bDmiBgPqOpy1ua8YCrMPwyTk2fOWyzuwYec5Wem-XLnviCR8-01c_rKEH7-kcJn2dGHJYgG4QvWDcxil3ieNMKd1ZwzMx3S9FR4kfYefFgUBs9fT-3wAzI-aPjZkFHQvGleDD5WytGCoLBSCLxQQK_L8sQRn-JREfvmkeD31thUx7-uWJnHi455Egm4ajf2gWE6Y"/><div class="animate-float-subtle absolute bottom-2 left-2 right-2 bg-tavern-timber/90 backdrop-blur-md text-amber-200 px-3 py-1.5 rounded flex items-center justify-between text-xs font-tavern-title shadow"><span class="flex items-center gap-1 font-bold text-amber-300"><span class="material-symbols-outlined text-sm text-tavern-amber">pets</span> Mascot Norm Approved</span><span class="font-bold text-parchment">Hendrum, MN</span></div></div></div><div class="lg:col-span-7 flex flex-col space-y-4"><div class="space-y-1"><div class="inline-flex items-center gap-2 px-3 py-0.5 rounded bg-tavern-amber/15 border border-tavern-amber/30 text-xs uppercase tracking-widest font-bold text-tavern-rust font-tavern-title"><span class="material-symbols-outlined text-sm">stars</span> Fresh From The Tavern Kitchen</div><h3 class="font-tavern-display text-2xl sm:text-3xl font-black text-tavern-timber leading-tight">Weekly Kitchen Specials</h3><p class="font-body-serif text-sm text-tavern-oak leading-relaxed">Hearty Midwestern favorites made fresh each weeknight right here on Main Street.</p></div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+<!-- Tuesday -->
+<div class="p-3.5 rounded bg-parchment-warm border border-parchment-border space-y-1 hover:translate-x-1.5 hover:border-tavern-rust/50 hover:bg-parchment-card transition-all duration-200 shadow-2xs group cursor-default"><div class="flex items-center justify-between font-tavern-title"><span class="text-xs font-black uppercase tracking-wider text-tavern-rust group-hover:text-tavern-amber transition-colors">Tuesday</span><span class="text-[11px] font-bold text-tavern-copper px-1.5 py-0.5 rounded bg-parchment-card border border-parchment-border">All Day</span></div><h4 class="font-tavern-display text-base font-bold text-tavern-timber">Taco in a Bag or Taco Salad</h4><p class="font-body-serif text-xs text-tavern-oak">All the taco goodness — seasoned beef, cheese &amp; fresh toppings pick how you want it!</p></div>
+<!-- Wednesday -->
+<div class="p-3.5 rounded bg-parchment-warm border border-parchment-border space-y-1 hover:translate-x-1.5 hover:border-tavern-rust/50 hover:bg-parchment-card transition-all duration-200 shadow-2xs group cursor-default"><div class="flex items-center justify-between font-tavern-title"><span class="text-xs font-black uppercase tracking-wider text-tavern-rust group-hover:text-tavern-amber transition-colors">Wednesday</span><span class="text-[11px] font-bold text-tavern-copper px-1.5 py-0.5 rounded bg-parchment-card border border-parchment-border">Wing Night</span></div><h4 class="font-tavern-display text-base font-bold text-tavern-timber">Crispy Tavern Wings</h4><p class="font-body-serif text-xs text-tavern-oak">Tossed in your favorite savory or sweet heat glazes, served with house dipping sauces.</p></div>
+<!-- Thursday -->
+<div class="p-3.5 rounded bg-parchment-warm border border-parchment-border space-y-1 hover:translate-x-1.5 hover:border-tavern-rust/50 hover:bg-parchment-card transition-all duration-200 shadow-2xs group cursor-default"><div class="flex items-center justify-between font-tavern-title"><span class="text-xs font-black uppercase tracking-wider text-tavern-rust group-hover:text-tavern-amber transition-colors">Thursday</span><span class="text-[11px] font-bold text-tavern-copper px-1.5 py-0.5 rounded bg-parchment-card border border-parchment-border">Midwest Classic</span></div><h4 class="font-tavern-display text-base font-bold text-tavern-timber">Hotdish &amp; Breadsticks</h4><p class="font-body-serif text-xs text-tavern-oak">Oven-baked bubbly hotdish comfort served alongside warm seasoned garlic breadsticks.</p></div>
+<!-- Friday -->
+<div class="p-3.5 rounded bg-parchment-warm border border-parchment-border space-y-1 hover:translate-x-1.5 hover:border-tavern-rust/50 hover:bg-parchment-card transition-all duration-200 shadow-2xs group cursor-default"><div class="flex items-center justify-between font-tavern-title"><span class="text-xs font-black uppercase tracking-wider text-tavern-rust group-hover:text-tavern-amber transition-colors">Friday</span><span class="text-[11px] font-bold text-tavern-copper px-1.5 py-0.5 rounded bg-parchment-card border border-parchment-border">Friday Favorite</span></div><h4 class="font-tavern-display text-base font-bold text-tavern-timber">Scalloped Potatoes &amp; Ham</h4><p class="font-body-serif text-xs text-tavern-oak">Creamy scalloped sliced potatoes with diced tender country ham and warm breadsticks.</p></div></div>
+<div class="p-3 rounded bg-tavern-timber text-parchment flex items-center justify-between flex-wrap gap-2 hover:bg-tavern-oak transition-colors duration-200"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tavern-amber text-lg animate-pulse">favorite</span><span class="font-body-serif italic text-xs sm:text-sm text-amber-100">“Every bar has a story, ours includes you. ❤️”</span></div><a class="btn-tactile font-tavern-title text-xs font-bold uppercase tracking-wider text-amber-300 hover:text-white transition-colors flex items-center gap-1" href="tel:2184150400"><span class="material-symbols-outlined text-sm">call</span> Check Daily Availability</a></div></div></div></div>
+<div class="reveal-on-scroll mt-10 p-4 rounded bg-parchment-warm border border-parchment-border flex flex-wrap items-center justify-between gap-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-tavern-rust text-2xl">dinner_dining</span><div><span class="font-tavern-display text-sm font-bold text-tavern-timber block">Kitchen Serving Daily Until 10:00 PM</span><span class="font-body-serif text-xs text-tavern-oak">Dine-in at the bar, tavern tables, or call ahead for takeout.</span></div></div><a class="btn-tactile inline-flex items-center gap-1.5 bg-tavern-timber hover:bg-tavern-rust text-parchment px-4 py-2 rounded font-tavern-title text-xs font-bold uppercase tracking-wider transition-colors duration-200" href="tel:2184150400"><span class="material-symbols-outlined text-sm">call</span> Order Takeout: (218) 415-0400</a></div></div></section>
+<!-- OUR STORY & COMMUNITY ESSENCE (Warm Midwestern Heritage) -->
+<section class="w-full bg-parchment-warm py-16 lg:py-24 border-y-2 border-parchment-border" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Center Emblem & Heading -->
+<div class="reveal-on-scroll max-w-3xl mx-auto text-center space-y-4 mb-14">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-parchment-card border border-parchment-border text-xs uppercase tracking-widest font-bold text-tavern-rust font-tavern-title">
+<span class="material-symbols-outlined text-sm">cottage</span> The Heart of Hendrum, MN
+        </div>
+<h2 class="font-tavern-display text-3xl sm:text-4xl lg:text-5xl font-black text-tavern-timber tracking-tight leading-tight">
+          More Than Just A Bar — <span class="block italic font-normal text-tavern-rust font-serif">It's Hendrum’s Living Room.</span>
+</h2>
+<div class="w-24 h-0.5 bg-tavern-rust/50 mx-auto"></div>
+<p class="font-body-serif text-lg text-tavern-oak leading-relaxed">
+          In a proud Red River Valley town, Maggie’s is where farmers, neighbors, families, and visitors gather to unwind. We pride ourselves on real conversations, generous plates, honest prices, and authentic Midwestern hospitality.
+        </p>
+</div>
+<!-- 3 Feature Pillars with Woodcut Border Look -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="reveal-on-scroll delay-100 vintage-border bg-parchment-card p-7 rounded-lg shadow-xs flex flex-col space-y-3 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+<div class="w-12 h-12 rounded bg-tavern-timber text-amber-200 flex items-center justify-center border border-amber-900 shadow-xs group-hover:scale-110 group-hover:bg-tavern-rust transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+</div>
+<h3 class="font-tavern-display text-xl font-bold text-tavern-timber group-hover:text-tavern-rust transition-colors">Friendly Folks Who Know You</h3>
+<p class="font-body-serif text-sm text-tavern-oak leading-relaxed">
+            From our bartenders pouring your favorite drink to our kitchen staff searing smash burgers, you’re greeted with genuine warmth the minute you walk in.
+          </p>
+</div>
+<div class="reveal-on-scroll delay-200 vintage-border bg-parchment-card p-7 rounded-lg shadow-xs flex flex-col space-y-3 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+<div class="w-12 h-12 rounded bg-tavern-timber text-amber-200 flex items-center justify-center border border-amber-900 shadow-xs group-hover:scale-110 group-hover:bg-tavern-rust transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">music_note</span>
+</div>
+<h3 class="font-tavern-display text-xl font-bold text-tavern-timber group-hover:text-tavern-rust transition-colors">Cozy Atmosphere &amp; Great Tunes</h3>
+<p class="font-body-serif text-sm text-tavern-oak leading-relaxed">
+            Warm wood tones, vintage accents, easy seating, and great tunes humming in the background make every visit feel like a relaxing evening at home.
+          </p>
+</div>
+<div class="reveal-on-scroll delay-300 vintage-border bg-parchment-card p-7 rounded-lg shadow-xs flex flex-col space-y-3 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+<div class="w-12 h-12 rounded bg-tavern-timber text-amber-200 flex items-center justify-center border border-amber-900 shadow-xs group-hover:scale-110 group-hover:bg-tavern-rust transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">celebration</span>
+</div>
+<h3 class="font-tavern-display text-xl font-bold text-tavern-timber group-hover:text-tavern-rust transition-colors">Community Bingo &amp; Gatherings</h3>
+<p class="font-body-serif text-sm text-tavern-oak leading-relaxed">
+            We love bringing the county together! From our famous Crystal &amp; Plant Bingo to holiday costume parties and acoustic nights, there’s always something happening.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- COMMUNITY CALENDAR & UPCOMING HAPPENINGS -->
+<section class="w-full bg-parchment py-16 lg:py-24" id="events">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="reveal-on-scroll flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 pb-4 border-b-2 border-parchment-border">
+<div>
+<span class="font-tavern-title text-xs uppercase tracking-widest text-tavern-rust font-bold">Community Calendar</span>
+<h2 class="font-tavern-display text-3xl sm:text-4xl font-black text-tavern-timber tracking-tight mt-1">
+            Upcoming Events <span class="italic font-normal text-tavern-amber font-serif">&amp; Tavern Nights</span>
+</h2>
+<p class="font-body-serif text-base text-tavern-oak mt-1">
+            Round up your friends and neighbors! All events held right here at 303 Main St E.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-parchment-warm border border-parchment-border font-tavern-title text-xs font-bold text-tavern-timber">
+<span class="material-symbols-outlined text-sm text-tavern-rust">event</span> 303 Main St E, Hendrum, MN
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<!-- Event 1 -->
+<div class="reveal-on-scroll delay-100 vintage-border bg-parchment-card rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group md:col-span-1"><div class="relative aspect-[3/4] bg-tavern-timber overflow-hidden"><img alt="Maggie's Hometown Tavern Dart League Friday Nights with Norm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7IIhK0Wf0_A_KSRDGMJEgJXhLc5StpI0dfZKxYrozRYPeijbX28N4BYdXdM19AYDdSPc04cnZpORScmb645GDJZidk-va8pNLYyn7IsnszuBSvkdlGRnz-eXC8YrfrnBDmf1Y1VGgRgIE2phUFpfkbwoxx0XhDyOYGu52GMXHxQXvq6hohYcaF9Oq4E5o-6TtPmX3vuxN4GNFTkkg4zC5x-4zS_y7VauUT1ynxuW1Oe5YB5usrbcAbl8MpqfzJ8bXDs0"/><div class="absolute top-2.5 left-2.5 bg-tavern-rust text-parchment font-tavern-title text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider shadow group-hover:bg-tavern-timber transition-colors">Official League</div></div><div class="p-5 flex flex-col justify-between flex-1"><div class="space-y-2"><h3 class="font-tavern-display text-xl font-bold text-tavern-timber leading-tight group-hover:text-tavern-rust transition-colors">Friday Night Dart League</h3><div class="flex items-center gap-1.5 font-tavern-title text-xs font-bold text-tavern-copper"><span class="material-symbols-outlined text-sm">event_available</span>Every Friday • 2-Man Teams</div><p class="font-body-serif text-sm text-tavern-oak leading-relaxed">Grab your partner and sign up at Maggie's! Competitive fun, frosty drafts, and prizes all season long.</p></div><div class="pt-4 mt-4 border-t border-parchment-border flex items-center justify-between font-tavern-title text-xs font-bold text-tavern-timber"><span class="text-tavern-rust">Sign up at the bar</span><span class="material-symbols-outlined text-base text-tavern-rust group-hover:translate-x-1 transition-transform">arrow_forward</span></div></div></div>
+<!-- Event 2 -->
+<div class="reveal-on-scroll delay-200 vintage-border bg-parchment-card rounded-lg overflow-hidden flex flex-col justify-between hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group md:col-span-1"><div class="relative aspect-[3/4] bg-tavern-timber overflow-hidden"><img alt="Halloween Crystal and Plant Bingo Poster - Neuro-Minded with Maggie's Hometown Tavern" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALJ30mubi3iJrWIJslNIjQDOpL37UO1jZXTJhUYrqKosBg6aQhzQFCNfqjIwMA1jPHZDPf_RDop-C0zCNu7ifgl1--h2odj0-oH0y3zZTqpIcfw3pQJSdNsRjHOBYdm3OpUE68c3ubvAUEkANLjtK0kJOG48RP3e7x1d6ore4Xqq9vB0yEX5F2bZ40OgvONmQoL7LByzfCT-3e5T-3H3uJsPtIWYucERi9xLF322iyp0d7Y5ti0bfBGF1HqxOwIzpVlIo"/><div class="absolute top-2.5 left-2.5 bg-tavern-rust text-parchment font-tavern-title text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider shadow group-hover:bg-tavern-timber transition-colors">Community Favorite</div><div class="absolute top-2.5 right-2.5 bg-tavern-timber/90 backdrop-blur-md text-amber-200 font-tavern-title text-xs font-bold px-2 py-0.5 rounded shadow">$20 to Play</div></div><div class="p-5 flex flex-col justify-between flex-1"><div class="space-y-2"><div class="flex items-center justify-between text-xs font-tavern-title"><span class="text-tavern-rust font-black uppercase tracking-wider">Calling All Witches!</span><span class="font-bold text-tavern-timber flex items-center gap-1"><span class="material-symbols-outlined text-sm text-tavern-copper">schedule</span> Friday at 6:00 PM</span></div><h3 class="font-tavern-display text-xl font-bold text-tavern-timber leading-tight group-hover:text-tavern-rust transition-colors">Halloween Crystal &amp; Plant Bingo</h3><div class="inline-block px-2 py-0.5 rounded bg-tavern-amber/15 text-tavern-rust font-tavern-title text-[11px] font-bold border border-tavern-amber/30 uppercase tracking-wider">Neuro-Minded with Maggie's Hometown Tavern</div><p class="font-body-serif text-sm text-tavern-oak leading-relaxed">$20 to play includes a <strong>FREE Crystal Goodie Bag</strong>! Enjoy discounted crystals to make room for new inventory, houseplants, and tavern specials.</p><div class="p-2.5 rounded bg-parchment-warm border border-parchment-border text-xs font-body-serif text-tavern-oak space-y-1"><p class="text-tavern-rust font-bold font-tavern-title">✨ Extra Special Perk:</p><p>First 10 people who prepay (Venmo @Kristaktimm) receive an extra special gift!</p></div></div><div class="pt-4 mt-4 border-t border-parchment-border flex items-center justify-between font-tavern-title text-xs font-bold text-tavern-timber"><span class="text-tavern-rust">RSVP on Maggie's event page</span><span class="material-symbols-outlined text-base text-tavern-rust group-hover:translate-x-1 transition-transform">arrow_forward</span></div></div></div></div>
+</div>
+</section>
+<!-- VERBATIM CUSTOMER REVIEWS (Rustic Testimonial Wall) -->
+<section class="w-full bg-parchment-warm py-16 lg:py-24 border-t-2 border-parchment-border" id="reviews">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="reveal-on-scroll flex flex-col items-center text-center space-y-2 mb-12">
+<span class="font-tavern-title text-xs uppercase tracking-widest text-tavern-rust font-bold">Verbatim Hometown Praise</span>
+<h2 class="font-tavern-display text-3xl sm:text-4xl font-black text-tavern-timber tracking-tight">
+          What the Folks Are Saying
+        </h2>
+<div class="flex items-center gap-1 text-amber-600 pt-1">
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="font-tavern-title text-sm font-bold text-tavern-timber ml-2">4.8 Rating from Over 19+ Google &amp; Facebook Reviews</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Review 1 -->
+<div class="reveal-on-scroll delay-100 vintage-border bg-parchment-card p-6 sm:p-7 rounded-lg flex flex-col justify-between shadow-xs hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 group">
+<div>
+<div class="flex items-center gap-1 text-amber-600 mb-3">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="font-body-serif text-lg text-tavern-timber italic leading-snug">
+              "Cozy atmosphere with good music, food and fantastic service!"
+            </p>
+</div>
+<div class="pt-4 mt-6 border-t border-parchment-border flex items-center justify-between">
+<div>
+<span class="font-tavern-display text-sm font-bold text-tavern-timber block">Verified Patron</span>
+<span class="font-tavern-title text-xs text-tavern-copper font-semibold">Google Review (5/5 ★)</span>
+</div>
+<span class="material-symbols-outlined text-tavern-rust text-2xl opacity-60 group-hover:scale-110 transition-transform">format_quote</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="reveal-on-scroll delay-200 vintage-border bg-parchment-card p-6 sm:p-7 rounded-lg flex flex-col justify-between shadow-xs hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 group">
+<div>
+<div class="flex items-center gap-1 text-amber-600 mb-3">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="font-body-serif text-lg text-tavern-timber italic leading-snug">
+              "The chicken sammie was tasty and fries were delicious. Truly the best spot around."
+            </p>
+</div>
+<div class="pt-4 mt-6 border-t border-parchment-border flex items-center justify-between">
+<div>
+<span class="font-tavern-display text-sm font-bold text-tavern-timber block">Verified Guest</span>
+<span class="font-tavern-title text-xs text-tavern-copper font-semibold">Google Review (5/5 ★)</span>
+</div>
+<span class="material-symbols-outlined text-tavern-rust text-2xl opacity-60 group-hover:scale-110 transition-transform">format_quote</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="reveal-on-scroll delay-300 vintage-border bg-parchment-card p-6 sm:p-7 rounded-lg flex flex-col justify-between shadow-xs hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 group">
+<div>
+<div class="flex items-center gap-1 text-amber-600 mb-3">
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+</div>
+<p class="font-body-serif text-lg text-tavern-timber italic leading-snug">
+              "Maggie’s is a small town bar with food, friendly folks and cold beer. Couldn't ask for a better local hangout!"
+            </p>
+</div>
+<div class="pt-4 mt-6 border-t border-parchment-border flex items-center justify-between">
+<div>
+<span class="font-tavern-display text-sm font-bold text-tavern-timber block">Hendrum Resident</span>
+<span class="font-tavern-title text-xs text-tavern-copper font-semibold">Community Review (5/5 ★)</span>
+</div>
+<span class="material-symbols-outlined text-tavern-rust text-2xl opacity-60 group-hover:scale-110 transition-transform">format_quote</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- VISIT US / LOCATION & WEEKLY SCHEDULE SECTION -->
+<section class="w-full bg-parchment py-16 lg:py-24" id="location">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Left: Address & Hours Board -->
+<div class="reveal-on-scroll lg:col-span-6 vintage-border bg-parchment-card rounded-lg p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div class="space-y-6">
+<div>
+<div class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-900 border border-emerald-300 px-3 py-1 rounded font-tavern-title text-xs font-bold mb-3 uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span> Open Daily • Closes 10:00 PM
+              </div>
+<h2 class="font-tavern-display text-3xl font-black text-tavern-timber">
+                Come On By Maggie’s
+              </h2>
+<p class="font-body-serif text-sm text-tavern-oak mt-1">
+                Located right on Main Street in Hendrum, Minnesota. Plenty of easy parking right out front on the street.
+              </p>
+</div>
+<!-- Address & Phone Box -->
+<div class="bg-parchment-warm p-4 rounded border border-parchment-border space-y-3 font-tavern-title">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tavern-rust text-xl mt-0.5">location_on</span>
+<div>
+<h4 class="text-sm font-bold text-tavern-timber uppercase tracking-wider">Address</h4>
+<p class="font-body-serif text-sm text-tavern-timber">303 Main St E, Hendrum, MN 56550</p>
+</div>
+</div>
+<div class="flex items-start gap-3 pt-2 border-t border-parchment-border">
+<span class="material-symbols-outlined text-tavern-rust text-xl mt-0.5">call</span>
+<div>
+<h4 class="text-sm font-bold text-tavern-timber uppercase tracking-wider">Phone</h4>
+<a class="font-body-serif text-sm font-bold text-tavern-timber hover:text-tavern-rust transition-colors" href="tel:2184150400">(218) 415-0400</a>
+</div>
+</div>
+<div class="flex items-start gap-3 pt-2 border-t border-parchment-border">
+<span class="material-symbols-outlined text-tavern-rust text-xl mt-0.5">payments</span>
+<div>
+<h4 class="text-sm font-bold text-tavern-timber uppercase tracking-wider">Price Range</h4>
+<p class="font-body-serif text-xs text-tavern-oak">$10–$20 per person • Cash &amp; Cards Accepted</p>
+</div>
+</div>
+</div>
+<!-- Weekly Tavern Schedule Table -->
+<div class="bg-parchment-warm p-4 rounded border border-parchment-border">
+<h4 class="font-tavern-title text-sm font-bold text-tavern-timber mb-2.5 flex items-center justify-between uppercase tracking-wider">
+Weekly Tavern Schedule
+<span class="text-[11px] font-normal text-tavern-copper lowercase font-body-serif italic">typical visit: 1.5–2 hrs</span>
+</h4>
+<div class="space-y-2 text-xs font-tavern-title">
+<div class="flex justify-between py-1 border-b border-parchment-border font-medium text-tavern-timber">
+Monday – Thursday
+<span class="font-bold">3:00 PM – 10:00 PM</span>
+</div>
+<div class="flex justify-between py-1 border-b border-parchment-border font-bold text-tavern-rust bg-parchment-dark/60 px-1 rounded">
+Friday – Saturday (Prime Nights)
+11:00 AM – 11:00 PM
+</div>
+<div class="flex justify-between py-1 font-medium text-tavern-timber">
+Sunday
+<span class="font-bold">12:00 PM – 10:00 PM</span>
+</div>
+</div>
+<p class="font-body-serif text-[11px] text-tavern-oak mt-2 italic">
+                * Kitchen open for full menu during service. Peak friendly hours 6:00 PM – 9:00 PM.
+              </p>
+</div>
+</div>
+<!-- Buttons -->
+<div class="flex flex-wrap gap-3 pt-6 mt-6 border-t-2 border-parchment-border">
+<a class="btn-tactile flex-1 inline-flex items-center justify-center gap-1.5 bg-tavern-timber hover:bg-tavern-rust text-parchment px-4 py-3 rounded font-tavern-title text-xs font-bold uppercase tracking-widest transition-colors shadow-xs hover:shadow-md" href="https://maps.google.com/?q=303+Main+St+E,+Hendrum,+MN+56550" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base">directions</span> Google Directions
+            </a>
+<a class="btn-tactile inline-flex items-center justify-center gap-1.5 bg-parchment-warm hover:bg-parchment-dark text-tavern-timber border border-parchment-border px-4 py-3 rounded font-tavern-title text-xs font-bold uppercase tracking-wider transition-colors" href="tel:2184150400">
+<span class="material-symbols-outlined text-base text-tavern-rust">call</span> Call (218) 415-0400
+            </a>
+</div>
+</div>
+<!-- Right: Map / Water Tower Landmark Card -->
+<div class="reveal-on-scroll delay-200 lg:col-span-6 flex flex-col gap-6">
+<div class="vintage-border bg-parchment-card rounded-lg overflow-hidden flex-1 min-h-[300px] flex items-center justify-center text-center p-8 relative hover:shadow-md transition-shadow">
+<div class="max-w-sm flex flex-col items-center relative z-10 group">
+<div class="w-20 h-20 rounded-md p-1 bg-parchment-warm border-2 border-tavern-rust/70 shadow mb-3 overflow-hidden group-hover:scale-105 group-hover:rotate-1 transition-all duration-300">
+<img alt="Maggie's Water Tower Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApvLyS_4x1fSHxHkcSIviMshkBKUrswzsFsgGhjoIRgIFdPePaWiyWKkUz28RC-ZfeChi-7JirMCmQkH48sKqJ2NQvzf7M7Y8keeMgqTRtJGbM-m4Gya3hOLonaBk5jL0tsdGuMkj7zIJH2XuTsFPwQzGWc5HJxqVw0D4Be-PBr1ZrZtm71mIdDRt-ik-GbSzJZEPiBIwo0sWjnoTFGMLocUFgNCzByDA04dUxVeP2AHHRTdUKJJhOGifpBKdCCyAEAS0"/>
+</div>
+<h3 class="font-tavern-display text-2xl font-black text-tavern-timber">Maggie's Hometown Tavern</h3>
+<p class="font-tavern-title text-sm font-bold text-tavern-rust uppercase tracking-wider mt-1">303 Main St E, Hendrum, MN 56550</p>
+<span class="font-body-serif text-xs text-tavern-oak mt-1">Norman County • Red River Valley</span>
+<div class="mt-5 flex items-center gap-3">
+<a class="btn-tactile bg-tavern-timber text-parchment hover:bg-tavern-rust px-4 py-2 rounded font-tavern-title text-xs font-bold uppercase tracking-widest shadow-xs flex items-center gap-1.5 transition-colors" href="https://maps.google.com/?q=303+Main+St+E,+Hendrum,+MN+56550" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">open_in_new</span> Open Google Maps
+                </a>
+</div>
+</div>
+</div>
+<!-- Social Card: Facebook & TikTok -->
+<div class="vintage-border bg-parchment-card rounded-lg p-5 flex items-center justify-between flex-wrap gap-4 hover:shadow-md transition-shadow">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-parchment-warm border border-parchment-border text-tavern-rust flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+<div>
+<h4 class="font-tavern-display text-sm font-bold text-tavern-timber">Follow Maggie's Online</h4>
+<p class="font-body-serif text-xs text-tavern-oak">Daily specials, event updates &amp; tavern clips</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<a class="btn-tactile px-3 py-1.5 rounded bg-parchment-warm hover:bg-parchment-dark text-tavern-timber font-tavern-title text-xs font-bold border border-parchment-border transition-colors flex items-center gap-1" href="https://www.facebook.com" rel="noopener noreferrer" target="_blank">
+Facebook (5.0 ★)
+</a>
+<a class="btn-tactile px-3 py-1.5 rounded bg-parchment-warm hover:bg-parchment-dark text-tavern-timber font-tavern-title text-xs font-bold border border-parchment-border transition-colors flex items-center gap-1" href="https://www.tiktok.com" rel="noopener noreferrer" target="_blank">
+TikTok
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO GATHER STRIP (Rich Midwestern Barn / Tavern Wood Finish) -->
+<section class="w-full bg-tavern-timber text-parchment py-14 border-t-4 border-tavern-rust relative overflow-hidden">
+<div class="reveal-on-scroll max-w-4xl mx-auto px-4 text-center space-y-4 relative z-10">
+<div class="w-14 h-14 mx-auto rounded-full bg-tavern-oak border-2 border-amber-500/40 flex items-center justify-center text-amber-300 animate-hearth-pulse">
+<span class="material-symbols-outlined text-2xl">sports_bar</span>
+</div>
+<h2 class="font-tavern-display text-2xl sm:text-4xl font-bold tracking-tight text-white">
+        There’s a Cold Beer and a Friendly Smile Waiting for You.
+      </h2>
+<p class="font-body-serif text-amber-100/90 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+        Stop in tonight for our signature crispy chicken sammie, a seared smash burger, or an ice-cold pint with great neighbors.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-3 pt-3">
+<a class="btn-tactile inline-flex items-center gap-2 bg-tavern-amber hover:bg-amber-600 text-white font-tavern-title font-bold px-6 py-3.5 rounded text-xs uppercase tracking-widest transition-colors shadow hover:scale-105" href="tel:2184150400">
+<span class="material-symbols-outlined text-base">call</span> Call Ahead: (218) 415-0400
+        </a>
+<a class="btn-tactile inline-flex items-center gap-2 bg-parchment-card hover:bg-parchment text-tavern-timber font-tavern-title font-bold px-5 py-3.5 rounded text-xs uppercase tracking-widest transition-colors shadow hover:scale-105" href="https://maps.google.com/?q=303+Main+St+E,+Hendrum,+MN+56550" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base text-tavern-rust">directions</span> Get Directions
+        </a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (Rustic Midwestern Heritage) -->
+<footer class="w-full bg-parchment-warm text-tavern-oak pt-14 pb-8 border-t-2 border-parchment-border">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-parchment-border">
+<!-- Brand & Vintage Logo -->
+<div class="lg:col-span-5 flex flex-col space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded bg-parchment-card border-2 border-tavern-rust/60 p-0.5 overflow-hidden shrink-0 shadow-xs hover:scale-105 transition-transform duration-200">
+<img alt="Maggie's Hometown Tavern Hendrum MN Vintage Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApvLyS_4x1fSHxHkcSIviMshkBKUrswzsFsgGhjoIRgIFdPePaWiyWKkUz28RC-ZfeChi-7JirMCmQkH48sKqJ2NQvzf7M7Y8keeMgqTRtJGbM-m4Gya3hOLonaBk5jL0tsdGuMkj7zIJH2XuTsFPwQzGWc5HJxqVw0D4Be-PBr1ZrZtm71mIdDRt-ik-GbSzJZEPiBIwo0sWjnoTFGMLocUFgNCzByDA04dUxVeP2AHHRTdUKJJhOGifpBKdCCyAEAS0"/>
+</div>
+<div>
+<span class="font-tavern-display text-lg font-black text-tavern-timber block leading-tight">Maggie's Hometown Tavern</span>
+<span class="font-tavern-title text-xs uppercase tracking-widest text-tavern-rust font-bold">EST. 2024 • Hendrum, Minnesota</span>
+</div>
+</div>
+<p class="font-body-serif text-sm text-tavern-oak leading-relaxed max-w-sm">
+          "A small town bar with food, friendly folks and cold beer." Proudly serving our friends and neighbors throughout Hendrum and the Red River Valley.
+        </p>
+<div class="pt-2 flex items-center gap-3 font-tavern-title text-xs font-bold text-tavern-rust">
+<a class="hover:underline flex items-center gap-1 transition-colors" href="https://www.facebook.com" rel="noopener noreferrer" target="_blank">
+Facebook (5.0 ★)
+</a>
+•
+<a class="hover:underline flex items-center gap-1 transition-colors" href="https://www.tiktok.com" rel="noopener noreferrer" target="_blank">
+TikTok
+</a>
+•
+<a class="hover:underline flex items-center gap-1 transition-colors" href="https://maps.google.com/?q=303+Main+St+E,+Hendrum,+MN+56550" rel="noopener noreferrer" target="_blank">
+Google Reviews (4.8 ★)
+</a>
+</div>
+</div>
+<!-- Quick Nav Links -->
+<div class="lg:col-span-3 flex flex-col space-y-2">
+<span class="font-tavern-title text-xs uppercase tracking-wider font-bold text-tavern-timber">Tavern Navigation</span>
+<ul class="space-y-1.5 font-tavern-title text-xs text-tavern-oak">
+<li><a class="hover:text-tavern-rust transition-colors" href="#menu">Crispy Chicken Sammie &amp; Burgers</a></li>
+<li><a class="hover:text-tavern-rust transition-colors" href="#menu">Draft Beers &amp; Craft Cocktails</a></li>
+<li><a class="hover:text-tavern-rust transition-colors" href="#events">Crystal &amp; Plant Bingo</a></li>
+<li><a class="hover:text-tavern-rust transition-colors" href="#about">Our Midwestern Roots</a></li>
+<li><a class="hover:text-tavern-rust transition-colors" href="#reviews">Hometown Word &amp; Reviews</a></li>
+</ul>
+</div>
+<!-- Address & Contact -->
+<div class="lg:col-span-4 flex flex-col space-y-2">
+<span class="font-tavern-title text-xs uppercase tracking-wider font-bold text-tavern-timber">Visit Or Call</span>
+<address class="not-italic font-body-serif text-xs text-tavern-oak leading-relaxed">
+<strong class="text-tavern-timber font-bold">Maggie's Hometown Tavern</strong><br/>
+          303 Main St E<br/>
+          Hendrum, MN 56550<br/>
+          Phone: <a class="text-tavern-rust font-bold hover:underline" href="tel:2184150400">(218) 415-0400</a>
+</address>
+<div class="pt-1">
+<span class="text-[11px] font-tavern-title font-bold text-emerald-900 bg-emerald-100/90 px-2 py-0.5 rounded border border-emerald-300 inline-block uppercase tracking-wider">
+            Open Daily • Closes 10:00 PM
+          </span>
+</div>
+</div>
+</div>
+<!-- Legal & Small Town Signature -->
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-tavern-oak font-tavern-title uppercase tracking-wider gap-3">
+<p>© 2025 Maggie's Hometown Tavern. Hendrum, MN 56550.</p>
+<div class="flex items-center gap-3">
+Food, Friendly Folks &amp; Cold Beer
+•
+<a class="hover:text-tavern-rust transition-colors" href="#location">303 Main St E</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
