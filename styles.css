@@ -72,6 +72,10 @@
   position: relative;
 }
 
+.walls-could-talk-heading {
+  word-spacing: 0.2em;
+}
+
 .nav-link-sweep::after {
   content: '';
   position: absolute;
